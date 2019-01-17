@@ -1,26 +1,28 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { Switch, Route } from "react-router-dom";
+import Header from "./components/header";
+import Home from "./components/home/home";
+import "./App.scss";
+import About from "./components/about";
+import Work from "./components/work";
+import Contact from "./components/contact";
+import Footer from "./components/footer";
 
 class App extends Component {
   render() {
+    let isHomepage = window.location.pathname === "/";
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <React.Fragment>
+        <Header />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/about-me" component={About} />
+          <Route path="/works" component={Work} />
+          <Route path="/contact-me" component={Contact} />
+        </Switch>
+        {!isHomepage && <Footer />}
+      </React.Fragment>
     );
   }
 }
