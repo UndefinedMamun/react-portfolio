@@ -5,7 +5,7 @@ class About extends Component {
   state = {};
   render() {
     return (
-      <main id="about">
+      <main id="about" style={{ marginBottom: "20px" }}>
         <h1 className="lg-heading">
           About
           <span className="text-secondery">Me</span>

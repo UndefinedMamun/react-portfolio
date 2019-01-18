@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 class Header extends Component {
   state = {
@@ -35,33 +35,41 @@ class Header extends Component {
 
   render() {
     return (
-      <header>
-        <div
-          onClick={this.handleClick}
-          className={"menu-btn" + this.changeClass()}
-        >
-          <div className="btn-line" />
-          <div className="btn-line" />
-          <div className="btn-line" />
-        </div>
-
-        <nav className={"menu" + this.changeClass()}>
-          <div className={"menu-branding" + this.changeClass()}>
-            <div className="potrait" />
+      <React.Fragment>
+        <header>
+          <div
+            onClick={this.handleClick}
+            className={"menu-btn" + this.changeClass()}
+          >
+            <div className="btn-line" />
+            <div className="btn-line" />
+            <div className="btn-line" />
           </div>
-          <ul className={"menu-nav" + this.changeClass()}>
-            {this.state.navItems.map((item, index) => {
-              return (
-                <li key={index} className={"nav-item" + this.changeClass()}>
-                  <Link to={item.link} className="nav-link">
-                    {item.name}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </nav>
-      </header>
+
+          <nav className={"menu" + this.changeClass()}>
+            <div className={"menu-branding" + this.changeClass()}>
+              <div className="potrait" />
+            </div>
+            <ul className={"menu-nav" + this.changeClass()}>
+              {this.state.navItems.map((item, index) => {
+                return (
+                  <li key={index} className={"nav-item" + this.changeClass()}>
+                    <NavLink
+                      exact
+                      activeClassName="current"
+                      onClick={this.handleClick}
+                      to={item.link}
+                      className="nav-link"
+                    >
+                      {item.name}
+                    </NavLink>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
+        </header>
+      </React.Fragment>
     );
   }
 }

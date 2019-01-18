@@ -24,10 +24,14 @@ class Work extends Component {
                 <a href="#!">
                   <img src={item.img} alt="Project" />
                 </a>
-                <a href="" className="btn-light">
+                <a
+                  target="_blank"
+                  href="https://facebook.com"
+                  className="btn-light"
+                >
                   <i className="fas fa-eye" /> Project
                 </a>
-                <a href="" className="btn-dark">
+                <a target="_blank" href="" className="btn-dark">
                   <i className="fab fa-github" /> Github
                 </a>
               </div>

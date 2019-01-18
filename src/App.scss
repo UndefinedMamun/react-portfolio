@@ -1,1 +1,79 @@
 @import "./scss/main.scss";
+
+// appear on page load
+.fade-appear {
+  opacity: 0;
+  z-index: 1;
+
+  &.fade-appear-active {
+    opacity: 1;
+    transition: opacity 500ms linear;
+  }
+}
+
+// enter
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+
+  &.fade-enter-active {
+    opacity: 1;
+    transition: opacity 400ms linear 400ms;
+  }
+}
+
+// exit
+.fade-exit {
+  opacity: 1;
+
+  &.fade-exit-active {
+    opacity: 0;
+    transition: opacity 400ms linear;
+  }
+  &.fade-exit-done {
+    opacity: 0;
+  }
+}
+
+/* Page loading animation start */
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 5px;
+  background-color: red;
+  z-index: 9;
+  border: 1px solid $primary-color;
+
+  &.loading-appear {
+    transition: width 800ms ease-in;
+  }
+
+  &.loading-appear-active {
+    width: 100%;
+  }
+
+  &.loading-enter-active {
+    width: 100%;
+    transition: width 800ms ease-out;
+  }
+
+  &.loading-enter-done,
+  &.loading-exit,
+  &.loading-exit-done {
+    display: none;
+  }
+
+  &:after {
+    content: "";
+    width: 5px;
+    height: 200%;
+    position: absolute;
+    top: -35%;
+    right: -5.5px;
+    background: red;
+    border-radius: 50%;
+    z-index: 5;
+  }
+}

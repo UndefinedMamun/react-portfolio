@@ -48,10 +48,19 @@ header {
   color: $secondery-color;
 }
 
+.pageContainer {
+  min-height: 100vh;
+  // position: relative;
+}
+
 main {
   padding: 4rem;
   // height: 100%;
-  min-height: calc(100vh - 60px);
+  // min-height: calc(100vh - 60px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 
   .icons {
     margin-top: 1rem;
@@ -182,6 +191,10 @@ main {
   padding: 1rem;
   color: set-text-color($primary-color);
   height: 60px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 
 @import "mobile";
