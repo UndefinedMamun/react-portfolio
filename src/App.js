@@ -6,7 +6,7 @@ import Home from "./components/home/home";
 import "./App.scss";
 import About from "./components/about";
 import Work from "./components/work";
-import Contact from "./components/contact";
+import Contact from "./components/contact/contact";
 import Footer from "./components/footer";
 import NotFound from "./components/notFound";
 

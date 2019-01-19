@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./contact.scss";
 
 class Contact extends Component {
   state = {};
@@ -11,7 +12,7 @@ class Contact extends Component {
         </h1>
         <h2 className="sm-heading">This is how you can reach me...</h2>
 
-        <div className="boxes">
+        {/* <div className="boxes">
           <div>
             <span className="text-secondery">Email:</span>
             bkmmamun@gmail.com
@@ -20,11 +21,7 @@ class Contact extends Component {
             <span className="text-secondery">Phone:</span>
             8801745185666
           </div>
-          <div>
-            <span className="text-secondery">Address:</span>
-            16/83, Sector11, Uttara, Dhaka-1260
-          </div>
-        </div>
+        </div> */}
       </main>
     );
   }
