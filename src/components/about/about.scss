@@ -1,0 +1,49 @@
+@import "../../scss/config";
+
+.about-info {
+  display: grid;
+  grid-template-areas:
+    "bioimage bio bio"
+    "overview overview overview"
+    "job1 job2 job3";
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+
+  .bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: $secondery-color 3px solid;
+  }
+  .bio {
+    grid-area: bio;
+    font-size: 1.5rem;
+  }
+
+  .overview {
+    grid-area: overview;
+    margin-top: 25px;
+
+    p {
+      font-size: 1.3rem;
+      margin: 40px 0;
+    }
+  }
+
+  .job-1 {
+    grid-area: job1;
+  }
+  .job-2 {
+    grid-area: job2;
+  }
+  .job-3 {
+    grid-area: job3;
+  }
+
+  .job {
+    background: lighten($primary-color, 8);
+    padding: 0.5rem;
+    border-radius: 2px;
+    border-bottom: $secondery-color 5px solid;
+  }
+}

@@ -4,7 +4,7 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import Header from "./components/header";
 import Home from "./components/home/home";
 import "./App.scss";
-import About from "./components/about";
+import About from "./components/about/about";
 import Work from "./components/work";
 import Contact from "./components/contact/contact";
 import Footer from "./components/footer";

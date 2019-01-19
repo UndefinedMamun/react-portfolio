@@ -11,21 +11,20 @@ class Home extends Component {
         style={{ backgroundImage: "url(img/background.jpg)" }}
       >
         <h1 className="lg-heading">
-          Jhon
-          <span className="text-secondery">Doe</span>
+          Mohammad Al
+          <span className="text-secondery"> Mamun</span>
         </h1>
-        <h2 className="sm-heading">Web Developer, Programmer & Observer</h2>
+        <h2 className="sm-heading">
+          Web Developer, Programmer, Problem Solver
+        </h2>
         <div className="icons">
-          <a href="/to">
-            <i className="fab fa-twitter fa-2x" />
-          </a>
-          <a href="/to">
+          <a target="blank" href="https://www.facebook.com/UndefinedMamun">
             <i className="fab fa-facebook fa-2x" />
           </a>
-          <a href="/to">
+          <a target="blank" href="https://www.linkedin.com/in/undefinedmamun">
             <i className="fab fa-linkedin fa-2x" />
           </a>
-          <a href="/to">
+          <a target="blank" href="https://github.com/UndefinedMamun">
             <i className="fab fa-github fa-2x" />
           </a>
         </div>

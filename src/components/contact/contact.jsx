@@ -22,6 +22,8 @@ class Contact extends Component {
             8801745185666
           </div>
         </div> */}
+
+        <h3 className="lg-heading" />
       </main>
     );
   }
