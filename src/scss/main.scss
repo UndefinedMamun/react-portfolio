@@ -28,6 +28,7 @@ h3 {
 
   &.lg-heading {
     font-size: 5rem;
+    font-weight: bold;
   }
 
   &.sm-heading {
@@ -70,7 +71,7 @@ main {
     margin-top: 1rem;
 
     a {
-      padding: 0.4rem;
+      padding: 0.5rem;
       @include easeOut();
 
       &:hover {

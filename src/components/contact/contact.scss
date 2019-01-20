@@ -26,3 +26,70 @@
     }
   }
 }
+
+#contact {
+  .lg-heading {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+    grid-template-areas: "inputs  btn";
+
+    .inputs {
+      grid-area: "inputs";
+      // margin-left: 0.4rem;
+
+      .form-element {
+        display: block;
+        background-color: lighten($primary-color, 8);
+        width: 100%;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        border: none;
+        outline: none;
+        color: set-text-color($primary-color);
+
+        &::placeholder {
+          color: set-text-color($primary-color);
+          font-size: 1rem;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &.invalid {
+          border: 1px solid brown;
+        }
+      }
+
+      textarea.form-element {
+        resize: none;
+      }
+    }
+
+    #submit-btn {
+      grid-area: btn;
+      align-items: end;
+      display: grid;
+
+      button {
+        background-color: $secondery-color;
+        padding: 1.5rem;
+        border: none;
+        color: set-text-color($primary-color);
+        outline: none;
+        margin: 0 3rem;
+        font-size: 1rem;
+        font-weight: bold;
+
+        &:disabled {
+          background-color: darken($secondery-color, 15);
+        }
+      }
+    }
+  }
+}

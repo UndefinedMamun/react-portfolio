@@ -11,11 +11,11 @@ export const pages = [
     link: "/about-me"
   },
   {
-    name: "My works",
+    name: "Works",
     link: "/works"
   },
   {
-    name: "How to Reach me",
+    name: "Contact",
     link: "/contact-me"
   }
 ];

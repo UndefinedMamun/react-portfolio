@@ -25,7 +25,7 @@ class Home extends Component {
             <i className="fab fa-linkedin fa-2x" />
           </a>
           <a target="blank" href="https://github.com/UndefinedMamun">
-            <i className="fab fa-github fa-2x" />
+            <i className="fab fa-github-square fa-2x" />
           </a>
         </div>
       </main>
