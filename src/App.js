@@ -8,6 +8,7 @@ import About from "./components/about/about";
 import Work from "./components/work";
 import Contact from "./components/contact/contact";
 import Footer from "./components/footer";
+import PageContainer from "./components/pageContainer";
 import NotFound from "./components/notFound";
 
 class App extends Component {
@@ -17,22 +18,29 @@ class App extends Component {
 
   render() {
     let isHomepage = window.location.pathname === "/";
+    // PageContainer.
 
     return (
       <React.Fragment>
         <Header />
         <Route
-          render={({ location }) => (
-            <TransitionGroup className="pageContainer">
+          render={props => (
+            <TransitionGroup
+              props={{ location: props.location, history: props.history }}
+              component={PageContainer}
+            >
               <CSSTransition
-                key={location.key}
+                key={props.location.key}
                 appear={true}
                 timeout={800}
                 classNames="fade"
                 onEnter={() => this.setState({ animate: true })}
-                onEntered={() => this.setState({ animate: false })}
+                onEntered={() => {
+                  this.setState({ animate: false });
+                }}
+                onScroll={this.handleScroll}
               >
-                <Switch location={location}>
+                <Switch location={props.location}>
                   <Route exact path="/" component={Home} />
                   <Route path="/about-me" component={About} />
                   <Route path="/works" component={Work} />

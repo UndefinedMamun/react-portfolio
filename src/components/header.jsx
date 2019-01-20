@@ -1,27 +1,29 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 
+export const pages = [
+  {
+    name: "Home",
+    link: "/"
+  },
+  {
+    name: "About me",
+    link: "/about-me"
+  },
+  {
+    name: "My works",
+    link: "/works"
+  },
+  {
+    name: "How to Reach me",
+    link: "/contact-me"
+  }
+];
+
 class Header extends Component {
   state = {
     show: false,
-    navItems: [
-      {
-        name: "Home",
-        link: "/"
-      },
-      {
-        name: "About me",
-        link: "/about-me"
-      },
-      {
-        name: "My works",
-        link: "/works"
-      },
-      {
-        name: "How to Reach me",
-        link: "/contact-me"
-      }
-    ]
+    navItems: pages
   };
 
   handleClick = () => {
