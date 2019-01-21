@@ -77,7 +77,7 @@ class Contact extends Component {
               key="contact-1"
               appear={true}
               classNames="bounce"
-              timeout={800}
+              timeout={750}
             >
               <div className="contact-page-container">
                 <h1 className="lg-heading">
@@ -143,7 +143,7 @@ class Contact extends Component {
               key="contact-2"
               appear={true}
               classNames="bounce"
-              timeout={1600}
+              timeout={1500}
               onEntered={this.addClass}
             >
               <div className="onsubmit-thankyou">
