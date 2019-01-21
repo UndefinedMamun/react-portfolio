@@ -5,7 +5,7 @@ class PageContainer extends Component {
   state = {};
 
   componentDidMount() {
-    console.log(this.props);
+    // console.log(this.props);
     window.addEventListener("wheel", this.decideRedirection);
   }
 

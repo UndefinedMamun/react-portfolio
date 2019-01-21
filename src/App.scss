@@ -1,6 +1,6 @@
 @import "./scss/config";
 @import "./scss/main.scss";
-
+@import "~animate.css/animate.min.css";
 // appear on page load
 .fade-appear {
   opacity: 0;
@@ -33,6 +33,49 @@
   }
   &.fade-exit-done {
     opacity: 0;
+  }
+}
+
+/* Bounce */
+
+// enter
+.bounce-appear {
+  animation-duration: 0.8s;
+  animation-name: bounceIn;
+}
+// enter
+.bounce-enter {
+  opacity: 0;
+  &.bounce-enter-active {
+    animation-delay: 0.8s;
+    animation-duration: 0.8s;
+    animation-name: bounceIn;
+  }
+  &.bounce-enter-done {
+    opacity: 1;
+  }
+}
+
+// exit
+.bounce-exit {
+  animation-duration: 0.8s;
+  animation-name: bounceOut;
+
+  &.bounce-exit-done {
+    opacity: 0;
+  }
+}
+
+.animation-container {
+  position: relative;
+  width: 100%;
+
+  & > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 

@@ -38,7 +38,6 @@ class App extends Component {
                 onEntered={() => {
                   this.setState({ animate: false });
                 }}
-                onScroll={this.handleScroll}
               >
                 <Switch location={props.location}>
                   <Route exact path="/" component={Home} />
