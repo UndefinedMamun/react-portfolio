@@ -19,13 +19,23 @@ class PageContainer extends Component {
     if (!pageYOffset && e.deltaY < 0) {
       //up
       window.removeEventListener("wheel", this.decideRedirection);
+      // window.addEventListener("wheel", this.preventScrolling);
       return this.handleNavigation(path, "prev");
     } else if (pageYOffset + clientHeight === scrollHeight && e.deltaY > 0) {
       //down
       window.removeEventListener("wheel", this.decideRedirection);
-      return this.handleNavigation(path, "next");
+      // window.addEventListener("wheel", this.preventScrolling);
+      // document.addEventListener("mousewheel", this.preventScrolling);
+      // this.enable();
+      // return this.handleNavigation(path, "next");
     }
   };
+
+  preventScrolling(e) {
+    e.preventDefault();
+    console.log(e);
+    return false;
+  }
 
   handleNavigation = (cPath, direction) => {
     const current = pages.filter(p => p.link === cPath)[0];
@@ -44,17 +54,17 @@ class PageContainer extends Component {
     this.props.props.history.push(pages[index].link);
 
     setTimeout(() => {
+      // document.removeEventListener("mousewheel", this.preventScrolling);
+      // this.disable();
+      // window.removeEventListener("wheel", this.preventScrolling);
+
       window.addEventListener("wheel", this.decideRedirection);
     }, 800);
   };
 
   render() {
     // console.log(this.props);
-    return (
-      <div onScroll={this.handleScroll} className="pageContainer">
-        {this.props.children}
-      </div>
-    );
+    return <div className="pageContainer">{this.props.children}</div>;
   }
 }
 
