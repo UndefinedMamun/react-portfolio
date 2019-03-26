@@ -45,6 +45,16 @@ class About extends Component {
             </p>
 
             <p>
+              -> FrontEnd: Angular2/4, React Redux, JavaScript, ES6, Typescript,
+              jQuery, JSON, Webpack, HTML5, CSS, Sass, PSD to HTML, etc..{" "}
+            </p>
+            <p>-> UI Framework: Bootstrap, Angular Material Design.</p>
+            <p>-> BackEnd: NodeJS, Express, PHP, Socket.io, RESTfull API.</p>
+            <p>-> Database: MongoDB, MySQL, Firebase.</p>
+            <p>-> Test Automation: Mocha, Jasmin, Jest</p>
+            <p>-> Git</p>
+
+            <p>
               I'm familiar with Development to deployment workflow and
               deployment solutions like VPS/AWS, Firebase, Heroku and other
               cloud services.
@@ -57,27 +67,26 @@ class About extends Component {
           </div>
 
           <div className="job job-1">
-            <h3>123 Webshop</h3>
+            <h3>Farmacia Zaragoza</h3>
+            <span>Sept 2017 - Now</span>
+            <h5>Front-End Engigneer</h5>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatem minus ullam debitis aliquam quaerat iure quasi
-              voluptatibus non. Ullam, dicta!
+              You are wellcome to see some of our open source projects.
+              <a
+                style={{ display: "block" }}
+                href="https://github.com/Farmacia-Zaragoza"
+              >
+                Git
+              </a>
             </p>
           </div>
           <div className="job job-2">
-            <h3>123 Webshop</h3>
+            <h3>Microkodes</h3>
+            <span>February 2018 - October 2018</span>
+            <h5>Lead Front-End Developer</h5>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatem minus ullam debitis aliquam quaerat iure quasi
-              voluptatibus non. Ullam, dicta!
-            </p>
-          </div>
-          <div className="job job-3">
-            <h3>123 Webshop</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatem minus ullam debitis aliquam quaerat iure quasi
-              voluptatibus non. Ullam, dicta!
+              <a href="https://microkodes.com/">A small softwere company</a>{" "}
+              with lot of potential. I miss the team we had there.
             </p>
           </div>
         </div>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const NotFound = () => {
   return (
-    <main id="contact">
+    <main id="notFound">
       <h1 className="lg-heading">
         Not
         <span className="text-secondery"> Found</span>

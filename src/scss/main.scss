@@ -87,6 +87,16 @@ main {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 0.7rem;
 
+  .item {
+    // height: 150px;
+  }
+
+  .projectImage {
+    height: 150px;
+    overflow: hidden;
+    display: block;
+  }
+
   img {
     width: 100%;
     border: 3px #fff solid;
